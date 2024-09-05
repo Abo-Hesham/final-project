@@ -1,0 +1,14 @@
+[{
+  "_id": "77b23e603b7c3410025e2b38",
+  "email": "example@example.com",
+  "username": "exampleUser",
+  "password": "$2a$10$abcdefgHIJKLMNOpqrstuVwxYZ",
+  "dateOfBirth": "1990-01-01T00:00:00.000Z",
+  "location": "New York",
+  "userImage": "path/to/image.jpg",
+  "aboutMe": "I love coding!",
+  "comments": [],
+  "ratings": [],
+  "createdAt": "2024-08-06T16:20:30.123Z",
+  "updatedAt": "2024-08-06T16:20:30.123Z"
+}]

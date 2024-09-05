@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "66b25745be3815ecef7fa0a4"
+  },
+  "User": {
+    "$oid": "66b25723be3815ecef7fa0a0"
+  },
+  "HisId": {
+    "$oid": "66b253bcbe3815ecef7fa085"
+  },
+  "Value": 4,
+  "createdAt": {
+    "$date": "2024-08-06T17:03:01.111Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-06T17:03:01.111Z"
+  },
+  "__v": 0
+}]

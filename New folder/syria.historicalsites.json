@@ -1,0 +1,23 @@
+[{
+  "_id": {
+    "$oid": "66b253bcbe3815ecef7fa085"
+  },
+  "GovId": {
+    "$oid": "66b24abdd7d0f8839577855a"
+  },
+  "Name": "Historical Place Name",
+  "Desc": "Description of the historical place",
+  "ReadMore": "Read more about this place",
+  "Images": [
+    "3333.jpg"
+  ],
+  "comments": [],
+  "Rating": [
+    {
+      "$oid": "66b25745be3815ecef7fa0a4"
+    }
+  ],
+  "totalRates": 0,
+  "Visited": [],
+  "__v": 0
+}]

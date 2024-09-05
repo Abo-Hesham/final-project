@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Ubuntu:wght@400;500;700&display=swap');
+.Container {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    max-width: 850px;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    perspective: 2700px;
+    z-index: 100;
+}
+
+.Container #flip {
+    display: none;
+}
+
+.Container .cover {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 50%;
+    top: 0;
+    background-color: #0176be00;
+    z-index: 98;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform-style: preserve-3d;
+   backdrop-filter: blur(3px);
+}
+
+.Container .cover::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #00000025;
+    opacity: 0.2;
+    z-index: 100;
+}
+
+.Container .cover::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #0000002f;
+    opacity: 0.2;
+    z-index: 100;
+    transform: rotateY(180deg);
+}
+
+.Container #flip:checked~.cover {
+    transform: rotateY(-180deg);
+}
+
+.Container .cover img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 12;
+}
+
+.Container .cover .back {
+    backface-visibility: hidden;
+}
+
+.Container .cover .back .backImg {
+    transform: rotate(180deg);
+}
+
+
+/*
+.Container .cover .text {
+    position: absolute;
+    z-index: 111;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+
+.cover .text .text1,
+.cover .text .text2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.cover .back .text .text1,
+.cover .back .text .text2 {
+    transform: rotate(180deg);
+    backface-visibility: hidden;
+}
+
+.cover .text .text2 {
+    font-size: 15px;
+    font-weight: 500;
+}
+*/
+
+.Container .form {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.Container .form-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-content .login-form,
+.form-content .signup-form {
+    width: calc(100% / 2 - 25px);
+}
+
+.form .form-content .title {
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form .form-content .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 25px;
+    height: 3px;
+    background-color: #0174BE;
+}
+
+.form .form-content .signup-form .title::before {
+    width: 20px;
+}
+
+.form .form-content .input-boxes {
+    margin-top: 30px;
+}
+
+.form .form-content .input-box {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+}
+
+.form-content .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 30px;
+    font-size: 17px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.form-content .input-box input:focus,
+.form-content .input-box input:valid {
+    border-color: #0174BE;
+}
+
+.form-content .input-box .icon {
+    position: absolute;
+    color: #0174BE;
+    font-size: 17px;
+}
+
+.form .form-content .text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form .form-content .text a {
+    text-decoration: none;
+    color: #0174BE;
+}
+
+.form .form-content .text a:hover {
+    text-decoration: underline;
+}
+
+.form .form-content .button {
+    color: #fff;
+    margin-top: 40px;
+}
+
+.form .form-content .button input {
+    color: #fff;
+    background-color: #0174BE;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.4s ease
+}
+
+.form .form-content .button input:hover {
+    background-color: #0766AD;
+    scale: 1.02;
+}
+
+.form .form-content label {
+    color: #0766AD;
+    cursor: pointer;
+}
+
+.form .form-content label:hover {
+    color: #0766AD;
+    text-decoration: underline;
+}
+
+.form .form-content .login-text,
+.form .form-content .signup-text {
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* Responsive Registeration */
+
+@media (max-width: 800px)
+{   
+    .Container .cover
+    {
+        display: none;
+    }
+    .form-content .login-form,
+    .form-content .signup-form
+    {
+    width: 100%;
+    }
+    .form-content .signup-form
+    {   
+        display: none;
+    }
+    .Container #flip:checked ~ .form .signup-form
+    {   
+        padding: 0px 30px;
+        display: block;
+    }
+    .Container #flip:checked ~ .form .login-form
+    {
+        display: none;
+    }
+    
+    .Container .form .login-form{
+        padding: 0 30px;
+    }
+}
